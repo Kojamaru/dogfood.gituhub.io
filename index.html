@@ -13,16 +13,15 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <a href="">
+    <div class="container">
+      <a href="#">
         <h1>
           <img 
             src="img/logo1.png" 
             alt=""
             width="200"
-            height="80"
-          >
-          </h1>
+            height="96">
+        </h1>
       </a>
     </div>
 
@@ -40,22 +39,42 @@
       <span class="material-icons" id="open">
         menu
       </span>
-      
     </div>
   
-  <div class="overlay">
-    <span class="material-icons" id="close">close</span>
-    <nav>
-      <ul>
-        <li><a href="#">犬の病気</a></li>
-        <li><a href="#">犬の健康</a></li>
-        <li><a href="#">お問合せ</a></li>
-      </ul>
-    </nav>
-  </div>
- </header>
+    <div class="overlay">
+      <span class="material-icons" id="close">close</span>
+      <nav>
+        <ul>
+          <li>
+            <img src="img/Syringe.png" alt="注射器のアイコン">
+            <a href="#">
+              犬の病気
+            </a>
+          </li>
+          <li>
+            <img src="img/medicine.png" alt="薬のアイコン ">
+            <a href="#">
+              犬の健康
+            </a>
+          </li>
+          <li>
+            <img src="img/mail.png" alt="メールのアイコン">
+            <a href="#">
+              お問合せ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
- <div id="target"></div>
+    <form action="">
+      <div id="saerch_button"><i class="bi bi-search"></i></div>
+      <input type="text" name="" id="hidden_input" class="hidden">
+    </form>
+
+  </header>
+
+  <div id="target"></div>
 
   <section class="hero">
     <h1>犬が食べてはいけない食べ物まとめ</h1>
@@ -66,9 +85,9 @@
   </section>
 
   <section class="main">
-    <div class="list">
+    <div class="list animate">
       <ul>
-        <div class="list1">
+        <div class="list1 onion">
           <li class="main-list">
             <a href="#">
               <h1>野菜</h1>
@@ -108,7 +127,7 @@
               </li>
             </ul>
         </div>
-        <div class="list1">
+        <div class="list1 grape">
           <li class="main-list">
             <a href="#">
               <h1>果物</h1>
@@ -138,7 +157,7 @@
               </li>
             </ul>
         </div>
-        <div class="list1">
+        <div class="list1 seafood">
           <li class="main-list">
             <a href="#">
               <h1>魚介</h1>
@@ -163,7 +182,7 @@
               </li>
             </ul>
         </div>
-        <div class="list1">
+        <div class="list1 chocolate">
           <li class="main-list">
             <a href="#">
               <h1>お菓子</h1>
@@ -188,7 +207,7 @@
               </li>
             </ul>
         </div>
-        <div class="list1">
+        <div class="list1 meat">
           <li class="main-list">
             <a href="#">
               <h1>肉</h1>
@@ -203,7 +222,7 @@
               </li>
             </ul>
         </div>
-        <div class="list1">
+        <div class="list1 nuts">
           <li class="main-list">
             <a href="#">
               <h1>その他</h1>
@@ -236,10 +255,32 @@
       </ul>
     </div>
   </section>
-    
-  <footer>
-    <div class="container">
-      <small>(c) DogFoods.com</small>
+  
+  <div id="footer_img"></div>
+
+  <footer id="footer">
+    <div class="footer_area">
+      <ul>
+        <li><a href="#">F＆Q</a></li>
+        <li><a href="#">おすすめドッグフード</a></li>
+        <li><a href="#">おすすめドッグウェア</a></li>
+        <li><a href="#">飼い主の心得</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">犬の雑学</a></li>
+        <li><a href="#">犬の散歩</a></li>
+        <li><a href="#">ドッグイベント</a></li>
+        <li><a href="#">犬種まとめ</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">犬まとめ</a></li>
+        <li><a href="#">保護犬</a></li>
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">お問合せ</a></li>
+      </ul>
+    </div>
+
+    <div class="link">
       <ul>
         <li><a href="#"><i class="bi bi-twitter"></i></a></li>
         <li><a href="#"><i class="bi bi-instagram"></i></a></li>
@@ -247,6 +288,8 @@
         <li><a href="#"><i class="bi bi-youtube"></i></a></li>
       </ul>
     </div>
+
+    <small>(c) DogFoods.com</small> 
   </footer>
 
   <a href="#" id="to_top">
