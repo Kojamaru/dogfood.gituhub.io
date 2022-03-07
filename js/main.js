@@ -1,14 +1,21 @@
 'use strict';
 
 {
+  // header
+
   const open = document.getElementById('open');
+  const hero = document.querySelector('.hero');
   const overlay = document.querySelector('.overlay');
   const colse = document.getElementById('close');
   const saerch_button = document.getElementById('saerch_button');
   const hidden_input = document.getElementById('hidden_input');
-
+  
   open.addEventListener('click', () => {
     overlay.classList.add('show');
+  });
+
+  open.addEventListener('click', () => {
+    images.classList.add('hidden_hero');
   });
 
   colse.addEventListener('click', () => {
@@ -46,19 +53,41 @@
     });
   });
 
+  // hero
+
+  function play() {
+    setTimeout(() => {
+      images[currentIndex].classList.remove('current');
+      currentIndex++;
+      if (currentIndex > images.length - 1) {
+        currentIndex = 0;
+      }
+      images[currentIndex].classList.add('current');
+      play();
+    }, 3000);
+  }
+
+  const images = document.querySelectorAll('.hero img');
+  let currentIndex = 0;
+
+  play();
+  
+
   // Intersection Observer API
 
-  function callback(entries) {
+  function callback(entries, obs) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         return;
       }
+
       entry.target.classList.add('appear');
+      obs.unobserve(entry.target);
     });
   }
 
   const observer = new IntersectionObserver(callback, {
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   document.querySelectorAll('.animate').forEach(el => {
