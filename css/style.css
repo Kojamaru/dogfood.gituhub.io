@@ -45,7 +45,6 @@ a {
 
 header {
   display: flex;
-  
   /* background: rgba(79, 168, 180, 0.664); */
   background: rgba(135, 211, 221, 0.664);
   position: fixed;
@@ -68,7 +67,7 @@ header img {
 
 header.scrolled {
   background-color: rgba(79, 168, 180, 0.322);
-  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }
 
 .sp-menu {
@@ -163,6 +162,10 @@ header.scrolled {
 
 .overlay.show li:nth-child(3) {
   transition-delay: .5s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .6s;
 }
 
 .overlay img {
@@ -302,13 +305,54 @@ form {
   display: flex;
 }
 
-.main-list:before {
+.main-list::before,
+.vegetable > h1::before {
   content:'''';
-  background-color: rgb(79, 168, 180);
+  background-color: rgba(79, 168, 180, 0.733);
   width: 12px;
   height: 42px;
+  margin-right: 12px;
 }
 
+/* vegetable */
+.vegetable {
+  margin: 36px;
+}
+
+.vegetable section {
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(175, 175, 175, 0.438);
+}
+
+.vegetable h1 {
+  font-size: 32px;
+  /* position: relative; */
+}
+
+.vegetable h1::before {
+  display: inline-block;
+  content:"";
+  background-color: rgba(79, 168, 180, 0.733);
+  width: 18px;
+  height: 18px;
+  border-radius: 25%;
+  margin: 0 8px 4px 0;
+}
+
+.pic img {
+  width: 428px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.vegetable p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.desc h2 {
+  margin-top: 20px;
+}
 /* footer */
 #footer {
   padding: 220px 50px 0 50px;
@@ -420,6 +464,10 @@ form {
   border-radius: 5px;
 }
 
+.backhome a {
+  color: #eee;
+}
+
 @media (min-width: 700px) {
   .footer_area {
     display: flex;
@@ -443,10 +491,10 @@ form {
     font-size: 18px;
   }
 
-  ul.drpomenu {
+  ul.dropmenu {
     list-style-type: none;
-    margin-top: 24px;
-    padding: 0 12px;
+    margin-top: 10px;
+    padding: 0;
     display: flex;
   }
 
@@ -478,8 +526,20 @@ form {
     transition: .3s;
   }
 
-  .dropmenu a:hover {
+  a.dropmenu:hover {
     opacity: 1;
+  }
+
+  li.slash > a::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    transform: rotate(45deg);
+    border-color: transparent #333 #333 transparent;
+    top: 50px;
+    margin: -14px;
   }
 
   .dropmenu a::after {
@@ -489,7 +549,9 @@ form {
 
   ul.second {
     background-color: rgb(189, 225, 236);
-    /* background-color: rgb(240, 182, 106); */
+    /* background-color: rgba(240, 237, 198); */
+    /* background-color: rgb(255, 255, 255); */
+    border: #2a7592 solid 2px;
     border-radius: 5px;
     height: 90px;
   }
@@ -498,7 +560,7 @@ form {
     display: inline-block;
     margin-top: 12px;
   }
-
+  
   .sp-menu {
     display: none;
   }
@@ -568,7 +630,6 @@ form {
     /* background-color: rgba(21, 116, 233, 0.658); */
     margin-top: 302px;
     padding-bottom: 10px;
-    
   }
 
   .list h1 {
@@ -629,6 +690,25 @@ form {
 
   .list2 li {
     display: none;
+  }
+
+  .vegetable section {
+    display: flex;
+    padding-bottom: 40px;
+  }
+
+  .vegetable section:nth-child(4n-2) {
+    flex-direction: row-reverse;
+  }
+
+  .vegetable p {
+    margin-right: 40px;
+  }
+
+  .pic img {
+    width: 500px;
+    height: 300px;
+    margin: 20px 40px 0 0;
   }
 
   /* footer */
