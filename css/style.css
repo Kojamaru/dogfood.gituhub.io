@@ -149,7 +149,6 @@ header.scrolled {
 
 .overlay.show li:hover {
  opacity: 0.6;
- /* animation-name: move; */
 }
 
 .overlay.show li:nth-child(1) {
@@ -211,10 +210,6 @@ form {
   height: 400px;
 }
 
-/* .hidden_hero {
-  position: initial;
-} */
-
 .hero h1 {
   font-size: 38px;
   text-align: center;
@@ -230,7 +225,6 @@ form {
   opacity: 0;
   transition: opacity 1s;
 }
-
 
 .hero img.current {
   opacity: 1;
@@ -326,7 +320,6 @@ form {
 
 .vegetable h1 {
   font-size: 32px;
-  /* position: relative; */
 }
 
 .vegetable h1::before {
@@ -361,8 +354,6 @@ form {
 
 .footer_area {
   justify-content: space-between;
-  /* display: flex; */
-  /* background-color: aquamarine; */
 }
 
 .footer_area ul {
@@ -491,6 +482,12 @@ form {
     margin-left: auto;
     display: flex;
     font-size: 18px;
+    opacity: .8;
+  }
+
+  .pc-menu a:hover {
+    opacity: 1;
+    transition: .4s;
   }
 
   ul.dropmenu {
@@ -551,8 +548,6 @@ form {
 
   ul.second {
     background-color: rgb(189, 225, 236);
-    /* background-color: rgba(240, 237, 198); */
-    /* background-color: rgb(255, 255, 255); */
     border: #2a7592 solid 2px;
     border-radius: 5px;
     height: 90px;
